@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Modules\LeadStatus\Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+
+class LeadStatusSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        DB::table('lead_statuses')->insert([
+            ['name' => 'New', 'color' => '#ff0000', 'order' => 1, 'created_at' => now(), 'updated_at' => now()],
+            ['name' => 'Contacted', 'color' => '#00ff00', 'order' => 2, 'created_at' => now(), 'updated_at' => now()],
+            ['name' => 'Qualified', 'color' => '#0000ff', 'order' => 3, 'created_at' => now(), 'updated_at' => now()],
+            ['name' => 'Lost', 'color' => '#ff9900', 'order' => 4, 'created_at' => now(), 'updated_at' => now()],
+        ]);
+    }
+}
