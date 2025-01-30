@@ -64,6 +64,7 @@
 <!-- Select2 JS -->
 <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
 
+@yield('page_scripts')
 @stack('scripts') <!-- For adding extra scripts in specific pages -->
 </body>
 </html>

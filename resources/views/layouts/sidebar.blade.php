@@ -18,17 +18,17 @@
                     </a>
                 </li>
                 {{-- Leads Start --}}
-                <li class="nav-item {{ request()->is('admin/lead-*') ? 'menu-open' : '' }}">
-                    <a href="#" class="nav-link {{ request()->is('admin/lead-*') ? 'active' : '' }}">
+                <li class="nav-item {{ request()->is('lead-*') ? 'menu-open' : '' }}">
+                    <a href="#" class="nav-link {{ request()->is('lead-*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-tty"></i>
                         <p>
                             Leads
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
-                    <ul class="nav nav-treeview pl-3" style="display: {{ request()->is('admin/lead-*') ? 'block' : 'none' }};">
+                    <ul class="nav nav-treeview pl-3" style="display: {{ request()->is('lead-status', 'lead-sources', 'leads', 'lead-*') ? 'block' : 'none' }};">
                         <li class="nav-item">
-                            <a href="{{ url('/admin/lead-status') }}" class="nav-link {{ request()->is('admin/lead-status') ? 'active' : '' }}">
+                            <a href="{{ route('lead.status.index') }}" class="nav-link {{ request()->is('lead-status', 'lead-status/*') ? 'active' : '' }}">
                                 <i class="fas fa-blender-phone nav-icon"></i>
                                 <p>Lead Status</p>
                             </a>
